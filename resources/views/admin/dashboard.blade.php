@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/css/tailwind.output.css') }}" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"  rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/buttons.dataTables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/dataTables.min.css') }}">
-   
+
 
 
     <script src="{{ asset('assets/js/charts-lines.js') }}" defer></script>
@@ -33,28 +33,28 @@
         <aside class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0">
             <div class="py-4 text-gray-500 dark:text-gray-400">
                 <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
-                   Admin Dashboard
+                    Admin Dashboard
                 </a>
                 <ul class="mt-6 ">
                     <li class="relative px-6 py-3">
-                        
+
                         <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                             href="{{ route('admin.dashboard') }}">
-                            <i class='bx bxs-dashboard text-2xl font-semibold' ></i>
+                            <i class='bx bxs-dashboard text-2xl font-semibold'></i>
 
                             <span class="ml-4">Dashboard</span>
                         </a>
                     </li>
                 </ul>
-                <ul >
-                   
-                    
+                <ul>
+
+
                     <li class="relative px-6 py-3">
                         <button
                             class="inline-flex items-center justify-between w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                             @click="togglePagesMenu" aria-haspopup="true">
                             <span class="inline-flex items-center">
-                                <i class='bx bxs-watch text-2xl font-semibold' ></i>
+                                <i class='bx bxs-watch text-2xl font-semibold'></i>
                                 <span class="ml-4">Montres</span>
                             </span>
                             <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
@@ -81,13 +81,13 @@
                                     <a class="w-full" href="{{ route('admin.liste') }}">Liste de Montre</a>
                                 </li>
                                 <li
-                                class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <a class="w-full" href="{{ route('admin.listeVente') }}">Liste des Ventes</a>
-                            </li>
-                               
-                            </li>
-                                
-                        </template>
+                                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                                    <a class="w-full" href="{{ route('admin.listeVente') }}">Liste des Ventes</a>
+                                </li>
+
+                    </li>
+
+                    </template>
                     </li>
                     <li class="relative px-6 py-3">
                         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -205,7 +205,7 @@
             @keydown.escape="closeSideMenu">
             <div class="py-4 text-gray-500 dark:text-gray-400">
                 <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
-                   Admin Dashboard
+                    Admin Dashboard
                 </a>
                 <ul class="mt-6">
                     <li class="relative px-6 py-3">
@@ -213,13 +213,13 @@
                             aria-hidden="true"></span>
                         <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                             href="{{ route('admin.dashboard') }}">
-                            <i class='bx bxs-dashboard text-2xl font-semibold' ></i>
+                            <i class='bx bxs-dashboard text-2xl font-semibold'></i>
                             <span class="ml-4">Dashboard</span>
                         </a>
                     </li>
                 </ul>
                 <ul>
-                   
+
 
                     <li class="relative px-6 py-3">
                         <button
@@ -255,12 +255,12 @@
                                     </a>
                                 </li>
                                 <li
-                                class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <a class="w-full" href="{{ route('admin.listeVente') }}">
-                                    Liste des Ventes de Montres
-                                </a>
-                            </li>
-                               
+                                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                                    <a class="w-full" href="{{ route('admin.listeVente') }}">
+                                        Liste des Ventes de Montres
+                                    </a>
+                                </li>
+
                             </ul>
                         </template>
                     </li>
@@ -478,9 +478,10 @@
                             <button class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
                                 @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account"
                                 aria-haspopup="true">
-                                <img class="object-cover w-8 h-8 rounded-full"
+                                {{-- <img class="object-cover w-8 h-8 rounded-full"
                                     src="https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82"
-                                    alt="" aria-hidden="true" />
+                                    alt="" aria-hidden="true" /> --}}
+                                    <img src="{{ asset('storage/' . Auth::user()->profilephotopath) }}" alt="Photo de profil">
                             </button>
                             <template x-if="isProfileMenuOpen">
                                 <ul x-transition:leave="transition ease-in duration-150"
@@ -525,20 +526,21 @@
                 </div>
             </header>
             @if (session('success'))
-            <div class=" flex justify-end text-white font-serif font-semibold text-xl rounded-sm px-4 h-12 mr-6">
-                <div class="bg-green-400 w-2/5 fade-out text-white font-semibold text-xl rounded-lg p-4 shadow-md " >
-                    <i class='bx bxs-bell-ring text-2xl font-semibold' ></i>
-                    {{ session('success') }}
+                <div class=" flex justify-end text-white font-serif font-semibold text-xl rounded-sm px-4 h-12 mr-6">
+                    <div
+                        class="bg-green-400 w-2/5 fade-out text-white font-semibold text-xl rounded-lg p-4 shadow-md ">
+                        <i class='bx bxs-bell-ring text-2xl font-semibold'></i>
+                        {{ session('success') }}
+                    </div>
                 </div>
-            </div>
             @endif
             <main class="h-full overflow-y-auto">
-               @yield('main')
-               @yield('liste')
-               @yield('ajout')
-               @yield('misajour')
-               @yield('vente')
-               @yield('listeVentes')
+                @yield('main')
+                @yield('liste')
+                @yield('ajout')
+                @yield('misajour')
+                @yield('vente')
+                @yield('listeVentes')
             </main>
         </div>
     </div>
@@ -546,42 +548,42 @@
         function calculateTotal() {
             // Récupérer la valeur de la quantité vendue
             let quantity = parseFloat(document.getElementById('quantiteVend').value);
-    
+
             // Récupérer le prix de la montre (vous pouvez le stocker dans un attribut data ou le récupérer d'une autre manière)
             let price = parseFloat(document.getElementById('prix').value);
-    
+
             // Calculer le montant total de la vente
             let total = price * quantity;
-    
+
             // Mettre à jour la valeur du montant total dans l'input
             document.getElementById('total').value = total;
         }
     </script>
-    
-    
-    <script  type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
-<script  type="text/javascript" src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
-<script  type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
-<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-<script  type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-    $('#example').DataTable( {
-        dom: 'Bfrtip',
-        buttons: [
-            'copyHtml5',
-            'excelHtml5',
-            'csvHtml5',
-            'pdfHtml5'
-        ]
-    } );
-} );
-</script>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5',
+                    'pdfHtml5'
+                ]
+            });
+        });
+    </script>
 
 </body>
 
 </script>
-</html>
 
+</html>

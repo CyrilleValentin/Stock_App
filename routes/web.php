@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\VenteController;
 use App\Http\Controllers\MontreController;
 use App\Http\Controllers\ProfileController;
@@ -19,6 +20,7 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', [MontreController::class, 'derniersEnregistrements'])->name('home');
 
 Route::get('/watches',[MontreController::class, 'boutique'] )->name('watches');
+
 
 Route::get('/about', function () {
     return view('about');

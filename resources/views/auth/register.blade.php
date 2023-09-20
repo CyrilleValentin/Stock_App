@@ -23,11 +23,19 @@
                 </div>
                 <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
                     <div class="w-full">
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="{{ route('register') }}"enctype="multipart/form-data">
                             @csrf
                             <h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
                                 Inscription
                             </h1>
+                            <label class="block text-sm">
+                                <span class="text-gray-700 dark:text-gray-400">Photo de profil</span>
+                                <input
+                                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                                    type="file" id="profilephotopath" name="profilephotopath" :value="old('profilephotopath')"
+                                    placeholder="Photo de profil de l'Utilisateur" autofocus autocomplete="name" />
+                            </label>
+
                             <label class="block text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">Nom</span>
                                 <input

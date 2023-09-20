@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Vente;
 use App\Models\Montre;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 
 class MontreController extends Controller
@@ -163,7 +164,11 @@ public function boutique()
         'TicWatch' => $TicWatch,
     ]);
 }
-
+public function profile()
+    {
+       
+        
+    }
 
 
 }

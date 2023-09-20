@@ -41,8 +41,10 @@
          background-color: #E6C511; border-radius: 0.5rem;overflow:auto;position: fixed;">
         <!-- En-tête du panier -->
         <div class="p-4">
-            <h2 class="text-2xl" style="margin: 0; font-weight: 600;font-size: 2.5rem/* 24px */;
-            line-height: 2rem/* 32px */; text-align: center;color: white">Mon Panier</h2>
+            <h2 class="text-2xl"
+                style="margin: 0; font-weight: 600;font-size: 2.5rem/* 24px */;
+            line-height: 2rem/* 32px */; text-align: center;color: white">
+                Mon Panier</h2>
             <button id="close-cart-button" class="float-right"
                 style="border: none; background: none; font-size: 1.5rem; line-height: 1; cursor: pointer;">&times;</button>
         </div>
@@ -53,7 +55,8 @@
                 <div class=""
                     style=" display: flex; justify-content: space-between;.items-center {
                     ">
-                    <span style=" font-weight: 600;font-size: 1.125rem/* 18px */;line-height: 1.75rem/* 28px */;" class="text-lg">Nom du
+                    <span style=" font-weight: 600;font-size: 1.125rem/* 18px */;line-height: 1.75rem/* 28px */;"
+                        class="text-lg">Nom du
                         Produit </span>
                     <span style=" font-weight: 600;font-size: 1.125rem/* 18px */;line-height: 1.75rem/* 28px */;"
                         class="text-lg">Prix</span>
@@ -64,8 +67,10 @@
 
         <!-- Total du panier -->
         <div style="padding: 1rem/* 16px */; display: flex;justify-content: flex-end; flex-direction: column;">
-            <p id="cart-total"style="margin: 0; font-size: 1.25rem/* 20px */; 
-            line-height: 1.75rem/* 28px */; font-weight: 600;">Total:</p>
+            <p
+                id="cart-total"style="margin: 0; font-size: 1.25rem/* 20px */; 
+            line-height: 1.75rem/* 28px */; font-weight: 600;">
+                Total:</p>
             <button class="bg-blue-500 hover:bg-blue-600"
                 style="border: none; cursor: pointer; padding-top: 0.5rem/* 8px */; border-radius: 0.375rem/* 6px */;
                 padding-bottom: 0.5rem/* 8px */;background-color: #3B4A6B;color: white;  padding-left: 1rem/* 16px */;padding-right: 1rem/* 16px */;">
@@ -217,17 +222,17 @@
                                         Nouveau
                                     </span>
                                 </div>
-                              
+
                             </a>
                             <div class="text-center">
                                 <button class="rounded border-transparent"
-                                onclick="addToCart('{{ $montre->nom }}',  {{ $montre->prix }})"
-                                style="background-color: #3B4A6B;color: white;border: none;">
-                              Ajouter au panier</button>
+                                    onclick="addToCart('{{ $montre->nom }}',  {{ $montre->prix }})"
+                                    style="background-color: #3B4A6B;color: white;border: none;">
+                                    Ajouter au panier</button>
                             </div>
-                           
+
                         </div>
-                        
+
                     </div>
                 @endforeach
             </div>
@@ -381,11 +386,7 @@
                     </div>
                 </div>
             </div>
-            <div class="btn-box">
-                <a href="">
-                    Voir plus
-                </a>
-            </div>
+           
         </div>
     </section>
 
@@ -393,84 +394,7 @@
 
 
 
-    <!-- client section -->
-    <section class="client_section layout_padding">
-        <div class="container">
-            <div class="heading_container heading_center">
-                <h2>
-                    Testimonial
-                </h2>
-            </div>
-            <div class="carousel-wrap ">
-                <div class="owl-carousel client_owl-carousel">
-                    <div class="item">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="images/c1.jpg" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <div class="client_info">
-                                    <div class="client_name">
-                                        <h5>
-                                            Mark Thomas
-                                        </h5>
-                                        <h6>
-                                            Customer
-                                        </h6>
-                                    </div>
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut
-                                    labore
-                                    et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut
-                                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                    velit esse
-                                    cillum
-                                    dolore eu fugia
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="images/c2.jpg" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <div class="client_info">
-                                    <div class="client_name">
-                                        <h5>
-                                            Alina Hans
-                                        </h5>
-                                        <h6>
-                                            Customer
-                                        </h6>
-                                    </div>
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut
-                                    labore
-                                    et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut
-                                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                    velit esse
-                                    cillum
-                                    dolore eu fugia
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!-- end client section -->
 
     @include('composant.footer')
