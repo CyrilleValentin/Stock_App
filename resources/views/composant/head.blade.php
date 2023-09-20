@@ -1,7 +1,7 @@
 <div class="hero_area">
 
     <!-- header section strats -->
-    <header class="header_section">
+    <header class="header_section" style="position: fixed;z-index: 100;background-color:white;width: 100%;">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg custom_nav-container ">
                 <a class="navbar-brand" href="{{ route('home') }}">
@@ -34,24 +34,33 @@
                     <div class="user_option-box" style="margin-right: 2rem">
 
                         @guest
-                            <a style="text-align: center; border-radius: 1rem;background-color: #6a8ede;border-color: #6a8ede;" href="{{ route('login') }}">Se connecter</a>
+                            <a style="text-align: center; border-radius: 0.5rem;background-color: #6a8ede;
+                            border-color: #6a8ede;padding: 0.3rem"
+                                href="{{ route('login') }}">Se connecter</a>
                         @else
                             <form method="POST" action="{{ route('logout') }}">
                                 @CSRF
-                               <a style="text-align: center; border-radius: 1rem;background-color: #6a8ede;border-color: #6a8ede;" onclick="event.preventDefault();this.closest('form').submit();" class="dropdown-item"
+                                <a style="text-align: center;padding: 0.3rem; border-radius: 0.5rem;background-color: #6a8ede;border-color: #6a8ede;"
+                                    onclick="event.preventDefault();this.closest('form').submit();" class="dropdown-item"
                                     href="route('logout')">Déconnexion</a>
                             </form>
                         @endguest
 
 
-                        <a href="{{ route('profile.edit') }}">
+                        <a style="margin-left: 2rem;" href="{{ route('profile.edit') }} ">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </a>
                         <!-- Bouton pour ouvrir le panier -->
-                        
-                      </div>
-                      @include('composant.cart')
+
                     </div>
+                    <button id="open-cart-button"
+                        style=" --tw-bg-opacity: 1;
+                            background-color:#6A8EDE; --tw-text-opacity: 1;
+                                 padding: 0.5rem;border: none;
+                             border-radius: 9px; ">
+                             Panier
+                    </button>
+                </div>
             </nav>
         </div>
 
