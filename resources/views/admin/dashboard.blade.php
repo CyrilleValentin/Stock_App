@@ -18,9 +18,6 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/buttons.dataTables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/dataTables.min.css') }}">
-
-
-
     <script src="{{ asset('assets/js/charts-lines.js') }}" defer></script>
     <script src="{{ asset('assets/js/charts-pie.js') }}" defer></script>
     <script src="{{ asset('assets/js/focus-trap.js') }}" defer></script>

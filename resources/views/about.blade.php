@@ -29,7 +29,6 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
-
 </head>
 
 <body class="sub_page"style="background-color: rgb(227, 227, 229)">

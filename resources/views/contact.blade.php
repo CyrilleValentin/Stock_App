@@ -28,7 +28,6 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
 </head>
 
 <body class="sub_page"style="background-color: rgb(227, 227, 229)">
@@ -81,6 +80,19 @@ line-height: 1.75rem/* 28px */; font-weight: 600;">
   <!-- contact section -->
 
   <section class="contact_section layout_padding">
+    @if (session('success'))
+    <div style="display: flex; justify-content: flex-end; text-align: right; 
+    color: white; font-family: serif; font-weight: bold; font-size: 1.5rem;
+     padding: 0.5rem; margin-right: 1rem; background-color: #34d399; border-radius: 0.25rem;">
+        <div style="background-color: #4caf50; width: 40%; opacity: 0.9; color: white;
+         font-weight: bold; font-size: 1.5rem; border-radius: 0.5rem; padding: 1rem;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <i style="font-size: 2rem; font-weight: bold;" class="bx bxs-bell-ring"></i>
+            {{ session('success') }}
+        </div>
+    </div>
+@endif
+
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -90,25 +102,34 @@ line-height: 1.75rem/* 28px */; font-weight: 600;">
                 Contactez Nous
               </h2>
             </div>
-            <form action="">
+            
+            <form method="POST" action="{{ route('contact.form') }}">
+              @csrf
               <div>
-                <input type="text" placeholder="Nom Entier du Client" />
+                <input name="name" type="text" placeholder="Nom du Client"style="border-width: 1px; border-radius: 0.5rem/* 8px */;
+                width: 100%; padding-top: 0.5rem/* 8px */;padding-bottom: 0.5rem/* 8px */;
+                padding-left: 0.75rem/* 12px */; padding-right: 0.75rem/* 12px */; " autofocus />
               </div>
               <div>
-                <input type="email" placeholder="Email du Client" />
+                <input name="email" type="email" placeholder="Email du Client"style="border-width: 1px; border-radius: 0.5rem/* 8px */;
+                width: 100%; padding-top: 0.5rem/* 8px */;padding-bottom: 0.5rem/* 8px */;
+                padding-left: 0.75rem/* 12px */; padding-right: 0.75rem/* 12px */; "  />
               </div>
               <div>
-                <input type="text" placeholder="Numéro de téléphone du Client" />
+                <input name="subject" type="text" placeholder="Objet" style="border-width: 1px; border-radius: 0.5rem/* 8px */;
+                width: 100%; padding-top: 0.5rem/* 8px */;padding-bottom: 0.5rem/* 8px */;
+                padding-left: 0.75rem/* 12px */; padding-right: 0.75rem/* 12px */; " />
               </div>
               <div>
-                <textarea type="text" class="message-box" style="width: 30rem;height: 15rem;" placeholder="Message"></textarea>
+                <textarea type="text" name="message" class="message-box" style="width: 30rem;height: 15rem;" placeholder="Message"></textarea>
               </div>
               <div class="d-flex ">
-                <button>
+                <button type="submit">
                   ENVOYER
                 </button>
               </div>
             </form>
+          
           </div>
         </div>
         <div class="col-md-6">

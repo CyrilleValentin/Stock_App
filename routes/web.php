@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\VenteController;
 use App\Http\Controllers\MontreController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,12 +29,12 @@ Route::get('/about', function () {
 
 Route::get('/contact', function () {
     return view('contact');
-})->name('contact');
+})->name('contact')->middleware('auth');
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.form');
 
 Route::get('/admin/dasboard', function () {
     return view('admin.dashboard');
 })->name('admin');
-
 
 Route::get('/dashboard',[MontreController::class, 'derniersEnregistrements'])->middleware(['auth', 'verified'])->name('dashboard');
 

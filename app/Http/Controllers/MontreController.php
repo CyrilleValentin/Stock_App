@@ -164,11 +164,7 @@ public function boutique()
         'TicWatch' => $TicWatch,
     ]);
 }
-public function profile()
-    {
-       
-        
-    }
+
 
 
 }

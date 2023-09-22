@@ -29,7 +29,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
     <!-- responsive style -->
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
-    <link rel="stylesheet" href="css/cart.css">
+    
 
 </head>
 

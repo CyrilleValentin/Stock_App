@@ -29,7 +29,7 @@
     <link href="{{ asset('CSS/style.CSS') }}" rel="stylesheet" />
     <!-- responsive style -->
     <link href="{{ asset('CSS/responsive.CSS') }}" rel="stylesheet" />
-
+   
 </head>
 
 <body class="sub_page" style="background-color: rgb(227, 227, 229)">
