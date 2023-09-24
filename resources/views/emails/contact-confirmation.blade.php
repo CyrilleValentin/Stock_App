@@ -44,12 +44,12 @@
     <div class="container">
         <h1>Confirmation de réception de message</h1>
         <p>Merci de nous avoir contacter. Nous avons reçu votre message</p>
-        <p><strong>Nom :</strong> {{ contactMessage['name'] }}</p>
-        <p><strong>Email :</strong> {{ contactMessage['email'] }}</p>
-        <p><strong>Sujet :</strong> {{ contactMessage['subject'] }}</p>
+        <p><strong>Nom :</strong> {{ $contactMessage['name'] }}</p>
+        <p><strong>Email :</strong> {{ $contactMessage['email'] }}</p>
+        <p><strong>Sujet :</strong> {{ $contactMessage['subject'] }}</p>
         <div class="message">
             <strong>Message :</strong>
-            <p>{{ contactMessage['message'] }}</p>
+            <p>{{ $contactMessage['message'] }}</p>
         </div>
     </div>
 </body>

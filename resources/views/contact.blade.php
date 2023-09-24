@@ -83,7 +83,7 @@ line-height: 1.75rem/* 28px */; font-weight: 600;">
     @if (session('success'))
     <div style="display: flex; justify-content: flex-end; text-align: right; 
     color: white; font-family: serif; font-weight: bold; font-size: 1.5rem;
-     padding: 0.5rem; margin-right: 1rem; background-color: #34d399; border-radius: 0.25rem;">
+     padding: 0.5rem; margin-right: 1rem; border-radius: 0.25rem;">
         <div style="background-color: #4caf50; width: 40%; opacity: 0.9; color: white;
          font-weight: bold; font-size: 1.5rem; border-radius: 0.5rem; padding: 1rem;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">

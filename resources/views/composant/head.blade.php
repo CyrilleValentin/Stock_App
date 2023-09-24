@@ -17,9 +17,8 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="position: relative;">
                     <ul class="navbar-nav">
-                        <li class="nav-item active hover:text-white bg-blue-950">
-                            <a class="nav-link" href="{{ route('home') }}">ACCUEIL <span
-                                    class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('home') }}">ACCUEIL <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('watches') }}">BOUTIQUE</a>
@@ -53,16 +52,24 @@
                         <!-- Bouton pour ouvrir le panier -->
 
                     </div>
+                   <div class="panier" style="display: flex; flex-direction: column;">
+                    <div id="cart-counter" class="compteur" style="display: flex; justify-content: center;align-items: center;
+                    bottom: 2rem; 
+                    background-color: #E6C511; color: white; width: 1.2rem;position: absolute;height: 1rem; border-radius: 100%">
+                        0
+                    </div>
                     <button id="open-cart-button"
-                        style=" --tw-bg-opacity: 1;
-                            background-color:#6A8EDE; --tw-text-opacity: 1;
-                                 padding: 0.5rem;border: none;
-                             border-radius: 9px; ">
-                             Panier
-                    </button>
+                    style=" --tw-bg-opacity: 1;
+                        background-color:#6A8EDE; --tw-text-opacity: 1;
+                             padding: 0.5rem;border: none;
+                         border-radius: 9px; ">
+                    Panier
+                </button>
+                   </div>
                 </div>
             </nav>
         </div>
 
     </header>
-    <!-- end header section -->
+</div>
+<!-- end header section -->

@@ -29,7 +29,8 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
     <!-- responsive style -->
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
-    
+    <link rel="stylesheet" href="cart.css">
+
 
 </head>
 
@@ -211,9 +212,9 @@
                                         {{ $montre->marque }}
                                     </h6>
                                     <h6>
-                                        Prix:
+
                                         <span>
-                                            {{ $montre->prix }} FCFA
+                                            {{ $montre->prix }} CFA
                                         </span>
                                     </h6>
                                 </div>
@@ -386,7 +387,7 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </section>
 
@@ -394,7 +395,7 @@
 
 
 
-    
+
     <!-- end client section -->
 
     @include('composant.footer')
@@ -432,11 +433,10 @@
             cartContainer.style.display = 'none';
         });
         const cartPrices = [];
-
+        let nombreArticles = 0;
         // Fonction pour ajouter un produit au panier (à appeler lorsque l'utilisateur ajoute un produit)
         function addToCart(productName, productPrice) {
             const cartContent = document.getElementById('cart-content');
-
             // Créez un élément d'article du panier
             const cartItem = document.createElement('div');
             cartItem.classList.add('border-b', 'pb-2', 'mb-2');
@@ -449,6 +449,8 @@
             // Ajoutez l'article au contenu du panier
             cartContent.appendChild(cartItem);
             cartPrices.push(parseFloat(productPrice));
+            nombreArticles++;
+            updateCartCounter();
             // Calculez et mettez à jour le total du panier (à implémenter)
             updateCartTotal();
         }
@@ -463,7 +465,40 @@
             // Mettez à jour l'élément du total
             totalElement.textContent = `Total : ${newTotal.toFixed(2)} CFA`;
         }
+
+        function updateCartCounter() {
+            const cartCounter = document.getElementById('cart-counter');
+            cartCounter.textContent = nombreArticles;
+        }
+        window.onload = () => {
+            updateCartCounter();
+        }
     </script>
+    <style>
+        .nav-item {
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .nav-item.active {
+            background-color: #6A8EDE;
+            /* Couleur de fond pour l'élément actif */
+            color: white;
+            /* Couleur du texte pour l'élément actif */
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.nav-item').click(function() {
+                // Retirez la classe active de tous les éléments de la barre de navigation
+                $('.nav-item').removeClass('active');
+                // Ajoutez la classe active à l'élément cliqué
+                $(this).addClass('active');
+            });
+        });
+    </script>
+
 </body>
 
 </html>
