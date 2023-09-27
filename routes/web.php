@@ -6,7 +6,7 @@ use App\Http\Controllers\VenteController;
 use App\Http\Controllers\MontreController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,14 +29,22 @@ Route::get('/about', function () {
 
 Route::get('/contact', function () {
     return view('contact');
-})->name('contact')->middleware('auth');
+})->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.form');
 
-Route::get('/admin/dasboard', function () {
-    return view('admin.dashboard');
-})->name('admin');
+// Route::get('/admin/dasboard', function () {
+//     return view('admin.dashboard');
+// })->name('admin');
 
-Route::get('/dashboard',[MontreController::class, 'derniersEnregistrements'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware(['auth'])->get('/admin/dashboard', function () {
+    if (Auth::user()->isAdmin()) {
+        return view('admin.dashboard');
+    } else {
+        return view('index');
+    }
+})->name('dashboard');
+
+//Route::get('/dashboard',[MontreController::class, 'derniersEnregistrements'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

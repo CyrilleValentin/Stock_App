@@ -16,28 +16,26 @@
     <title>WATCHES'LAND</title>
 
 
-    <!-- bootstrap core CSS -->
-    <link rel="stylesheet" type="text/CSS" href="{{ asset('CSS/bootstrap.CSS') }}" />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
     <!--owl slider stylesheet -->
-    <link rel="stylesheet" type="text/CSS"
-        href="HTTPS://CDNjs.cloudflare.com/AJAX/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.CSS" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
     <!-- font awesome style -->
-    <link href="{{ asset('CSS/font-awesome.min.CSS') }}" rel="stylesheet" />
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('CSS/style.CSS') }}" rel="stylesheet" />
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
     <!-- responsive style -->
-    <link href="{{ asset('CSS/responsive.CSS') }}" rel="stylesheet" />
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
    
 </head>
 
 <body class="sub_page" style="background-color: rgb(227, 227, 229)">
     <!-- Conteneur du panier (initialement masqué) -->
-    <div id="cart-container"
-        class="shadow-lg overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out"
-        style="display: none; position: absolute; top: 0; right: 0; width: 40%; height: 20rem; z-index: 900;
- background-color: #E6C511; border-radius: 0.5rem;overflow:auto;position: fixed;">
+    <div id="cart-container"class="cart-container">
         <!-- En-tête du panier -->
         <div class="p-4">
             <h2 class="text-2xl"
@@ -868,17 +866,17 @@
     <!-- jQery -->
     <script src="{{ asset('js/jQuery-3.4.1.min.js') }}"></script>
     <!-- popper js -->
-    <script src="HTTPS://CDN.jsdelivr.net/NPM/popper.js@1.16.0/dist/UMD/popper.min.js"
+    <script src="https://cdn.jsdelivr.net/NPM/popper.js@1.16.0/dist/UMD/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     <!-- bootstrap js -->
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <!-- owl slider -->
-    <script src="HTTPS://CDNjs.cloudflare.com/AJAX/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- custom js -->
     <script src="{{ asset('js/custom.js') }}"></script>
     <!-- Google Map -->
-    <script src="HTTPS://maps.googleapis.com/maps/API/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+    <script src="https://maps.googleapis.com/maps/API/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
     </script>
     <!-- End Google Map -->
     <script>

@@ -28,13 +28,12 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
 </head>
 
 <body class="sub_page"style="background-color: rgb(227, 227, 229)">
   <div id="cart-container"
-  class="shadow-lg overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out"
-  style="display: none; position: absolute; top: 0; right: 0; width: 40%; height: 20rem; z-index: 900;
-background-color: #E6C511; border-radius: 0.5rem;overflow:auto;position: fixed;">
+  class="cart-container">
   <!-- En-tête du panier -->
   <div class="p-4">
       <h2 class="text-2xl"

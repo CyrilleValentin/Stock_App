@@ -17,7 +17,7 @@
             <div class="flex flex-col overflow-y-auto md:flex-row">
                 <div class="h-32 md:h-auto md:w-1/2">
                     <img aria-hidden="true" class="object-cover w-full h-full dark:hidden"
-                        src="../assets/img/create-account-office.jpeg" alt="Office" />
+                        src="https://m.media-amazon.com/images/I/91QkEGX8ZBL._AC_UX500_.jpg" alt="Office" />
                     <img aria-hidden="true" class="hidden object-cover w-full h-full dark:block"
                         src="../assets/img/create-account-office-dark.jpeg" alt="Office" />
                 </div>
@@ -28,13 +28,7 @@
                             <h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
                                 Inscription
                             </h1>
-                            <label class="block text-sm">
-                                <span class="text-gray-700 dark:text-gray-400">Photo de profil</span>
-                                <input
-                                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                                    type="file" id="profilephotopath" name="profilephotopath" :value="old('profilephotopath')"
-                                    placeholder="Photo de profil de l'Utilisateur" autofocus autocomplete="name" />
-                            </label>
+                           
 
                             <label class="block text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">Nom</span>

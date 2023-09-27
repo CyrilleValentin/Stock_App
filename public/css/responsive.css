@@ -54,8 +54,27 @@
     margin-bottom: 45px;
   }
 
-}
+  .contact_link_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .user_option-box{
+    margin-bottom: 1rem;
+  }
+ 
 
+}
+@media only screen and (max-width:768px) {
+  #cart-container{
+    width: 20rem;
+    height: 25rem;
+  }
+  #titre-panier{
+    font-size: 0.9rem;
+  }
+}
 @media (max-width: 576px) {
   .hero_area {
     padding-left: 0;

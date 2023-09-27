@@ -1,0 +1,13 @@
+.cart-container{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 20rem;
+    z-index: 900;
+    background-color: #E6C511;
+    border-radius: 0.5rem;
+    overflow: auto;
+    position: fixed;
+}

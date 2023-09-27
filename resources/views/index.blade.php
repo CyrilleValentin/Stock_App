@@ -29,7 +29,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
     <!-- responsive style -->
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
 
 
 </head>
@@ -37,11 +37,10 @@
 <body class="sub_page" style="background-color: rgb(227, 227, 229)">
     <!-- Conteneur du panier (initialement masqué) -->
     <div id="cart-container"
-        class="shadow-lg overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out"
-        style="display: none; position: absolute; top: 0; right: 0; width: 40%; height: 20rem; z-index: 900;
-         background-color: #E6C511; border-radius: 0.5rem;overflow:auto;position: fixed;">
+        class="cart-container"
+        style="">
         <!-- En-tête du panier -->
-        <div class="p-4">
+        <div id="titre-panier" class="p-4">
             <h2 class="text-2xl"
                 style="margin: 0; font-weight: 600;font-size: 2.5rem/* 24px */;
             line-height: 2rem/* 32px */; text-align: center;color: white">

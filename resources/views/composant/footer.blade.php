@@ -19,12 +19,7 @@
 
 
         <div class="contact_link_box" style="justify-content: center; display: flex;gap: 1rem">
-            <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                    Location
-                </span>
-            </a>
+         
             <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
