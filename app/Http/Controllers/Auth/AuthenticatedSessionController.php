@@ -28,8 +28,18 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
-
-        return redirect()->intended('/');
+        // Personnalisez la redirection en fonction du rôle de l'utilisateur
+        if (Auth::user()->isAdmin()) {
+            // Rediriger les administrateurs vers le tableau de bord de l'admin
+            return redirect()->route('admin.dashboard');
+        } else if (Auth::user()->isAgent()) {
+            // Rediriger les administrateurs vers le tableau de bord de l'agent
+            return redirect()->route('agent.dashboard');
+        }
+        else  {
+            // Rediriger les clients vers la page d'accueil
+            return redirect()->intended('/');
+        }
     }
 
     /**

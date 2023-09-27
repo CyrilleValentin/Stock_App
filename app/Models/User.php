@@ -16,6 +16,11 @@ class User extends Authenticatable
         return $this->role == 'admin';
     }
 
+    public function isAgent()
+    {
+        return $this->role == 'agent';
+    }
+
     
     /**
      * The attributes that are mass assignable.

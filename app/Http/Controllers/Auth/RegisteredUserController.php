@@ -48,5 +48,40 @@ class RegisteredUserController extends Controller
 
         return redirect(RouteServiceProvider::HOME);
     }
+     public function index()
+        {
+            $users = User::all();
+            return view('admin.listeUtilisateur')->with('users', $users);
+        
+          }
+    public function destroy($id)
+        {
+          $user = User::findOrFail($id);
+           $user->delete();
+
+             return redirect()->back()->with('success', 'L\'enregistrement a été supprimé avec succès.');
+        }
+
+        public function edit($id)
+{
+    $user = User::findOrFail($id);
+
+    return view('admin.attribuerRoleAgent')->with('user', $user);
+}
+public function update(Request $request, $id)
+{
+    $user = User::findOrFail($id);
+
+    $data = $request->validate([
+        'name' => 'required|string',
+        'email' => 'required|string',
+        'role' => 'string',
+        // Ajoutez ici les autres champs que vous souhaitez mettre à jour
+    ]);
+
+    $user->update($data);
+
+    return redirect()->back()->with('success', 'L\'enregistrement a été mis à jour avec succès.');
+}
     
 }

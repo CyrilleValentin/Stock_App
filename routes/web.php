@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AgentController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\VenteController;
 use App\Http\Controllers\MontreController;
@@ -32,20 +33,6 @@ Route::get('/contact', function () {
 })->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.form');
 
-// Route::get('/admin/dasboard', function () {
-//     return view('admin.dashboard');
-// })->name('admin');
-
-Route::middleware(['auth'])->get('/admin/dashboard', function () {
-    if (Auth::user()->isAdmin()) {
-        return view('admin.dashboard');
-    } else {
-        return view('index');
-    }
-})->name('dashboard');
-
-//Route::get('/dashboard',[MontreController::class, 'derniersEnregistrements'])->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -70,9 +57,28 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/montres/{id}/vente', [MontreController::class, 'vente'])->name('montres.vente');
     Route::post('/montres/{id}/enregistrer-vente', [MontreController::class, 'enregistrerVente'])->name('enregistrer-vente');
        //Liste des ventes de Montres
-       Route::get('/admin/listeVente', [VenteController::class, 'index'])->name('admin.listeVente');
-
+    Route::get('/admin/listeVente', [VenteController::class, 'index'])->name('admin.listeVente');
+        //Liste des utilisateurs
+    Route::get('/admin/listeUtilisateur', [RegisteredUserController::class, 'index'])->name('admin.listeUtil');
+        //Suppression d'utilisateurs
+    Route::delete('/user/{id}', [RegisteredUserController::class, 'destroy'])->name('user.destroy');
+    //Attribuer role agent à un utilisateur
+    Route::get('/users/{id}/edit', [RegisteredUserController::class, 'edit'])->name('user.edit');
+    Route::post('/users/{id}/update', [RegisteredUserController::class, 'update'])->name('user.update');
     // Ajoute d'autres routes spécifiques à l'administration ici
 });
 
+Route::middleware(['auth', 'agent'])->group(function () {
+    //Navigation
+    Route::get('/agent/dashboard', [AgentController::class, 'dashboard'])->name('agent.dashboard');
+    Route::get('/agent/liste', [AgentController::class, 'liste'])->name('agent.liste');
+     //Liste des montres
+     Route::get('/agent/liste', [MontreController::class, 'index2'])->name('agent.liste');
+     //Mis à jour de montres
+     Route::get('/montres/{id}/edit', [MontreController::class, 'edit'])->name('montres.edit');
+     Route::post('/montres/{id}/update', [MontreController::class, 'update'])->name('montres.update');
+     //Vente de montres
+     Route::get('/montres/{id}/vente', [MontreController::class, 'vente2'])->name('montres.vente');
+     Route::post('/montres/{id}/enregistrer-vente', [MontreController::class, 'enregistrerVente'])->name('enregistrer-vente');
+});
 require __DIR__.'/auth.php';

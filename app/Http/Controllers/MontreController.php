@@ -47,6 +47,12 @@ class MontreController extends Controller
         return view('admin.listeMontre')->with('montres', $montres);
         
     }
+    public function index2()
+    {
+        $montres = Montre::all();
+        return view('agent.listeMontre')->with('montres', $montres);
+        
+    }
 
     public function destroy($id)
 {
@@ -90,6 +96,13 @@ public function vente($id)
     $montre = Montre::findOrFail($id);
 
     return view('admin.vente')->with('montre', $montre);
+}
+
+public function vente2($id)
+{
+    $montre = Montre::findOrFail($id);
+
+    return view('agent.vente')->with('montre', $montre);
 }
 
 public function enregistrerVente(Request $request, $id)
