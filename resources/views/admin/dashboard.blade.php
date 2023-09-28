@@ -21,7 +21,7 @@
     <script src="{{ asset('assets/js/charts-lines.js') }}" defer></script>
     <script src="{{ asset('assets/js/charts-pie.js') }}" defer></script>
     <script src="{{ asset('assets/js/focus-trap.js') }}" defer></script>
-
+    <script src="https://cdnjs.com/libraries/Chart.js"></script>
 </head>
 
 <body>
@@ -122,8 +122,8 @@
                         </template>
 
                     </li>
-                    
-                    
+
+
                     <li class="relative px-6 py-3">
                         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                             href="modals.html">
@@ -146,7 +146,7 @@
                             <span class="ml-4">Tables</span>
                         </a>
                     </li>
-                    
+
                 </ul>
                 <div class="px-6 my-6">
                     <button
@@ -267,7 +267,7 @@
                                         Liste des agents
                                     </a>
                                 </li>
-                               
+
 
                             </ul>
                         </template>
@@ -284,7 +284,7 @@
                             <span class="ml-4">Charts</span>
                         </a>
                     </li>
-                   
+
                     <li class="relative px-6 py-3">
                         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                             href="modals.html">
@@ -307,7 +307,7 @@
                             <span class="ml-4">Tables</span>
                         </a>
                     </li>
-                    
+
                 </ul>
                 <div class="px-6 my-6">
                     <button
@@ -420,7 +420,8 @@
                             <button class=" pt-3 rounded-full focus:shadow-outline-purple focus:outline-none"
                                 @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account"
                                 aria-haspopup="true">
-                                    <i class='bx bxs-user-circle text-xl  font-semibold object-cover w-8 h-8 rounded-full'></i>
+                                <i
+                                    class='bx bxs-user-circle text-xl  font-semibold object-cover w-8 h-8 rounded-full'></i>
                             </button>
                             <template x-if="isProfileMenuOpen">
                                 <ul x-transition:leave="transition ease-in duration-150"
@@ -500,8 +501,7 @@
             document.getElementById('total').value = total;
         }
     </script>
-
-
+    <script src="{{ mix('/js/app.js') }}"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>

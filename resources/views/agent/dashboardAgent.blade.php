@@ -45,14 +45,9 @@
                 </ul>
                 <ul>
                     <li class="relative px-6 py-3">
-                        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 text-gray-800 dark:text-gray-200"
                             href="{{ route('agent.liste') }}">
-                            <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                                <path
-                                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
-                                </path>
-                            </svg>
+                            <i class='bx bx-list-ul text-2xl font-semibold'></i>
                             <span class="ml-4">Liste des montres</span>
                         </a>
                     </li>                   
@@ -95,11 +90,7 @@
                     <li class="relative px-6 py-3">
                         <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                             href="{{ route('agent.liste') }}">
-                            <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                                <path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
-                                <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
-                            </svg>
+                            <i class='bx bx-list-ul text-2xl font-semibold'></i>
                             <span class="ml-4">Liste de Montres</span>
                         </a>
                     </li>
@@ -236,7 +227,7 @@
                                                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z">
                                                 </path>
                                             </svg>
-                                            <span>Profile</span>
+                                            <span>Profil</span>
                                         </a>
                                     </li>
                                     <li class="flex">
@@ -253,7 +244,7 @@
                                                         d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
                                                     </path>
                                                 </svg>
-                                                <span>Log out</span>
+                                                <span>Déconnexion</span>
                                             </a>
                                     </li>
                                 </ul>
@@ -272,10 +263,9 @@
                 </div>
             @endif
             <main class="h-full overflow-y-auto">
-                @yield('main')
-                @yield('liste')
-                @yield('misajour')
-                @yield('vente')
+                @yield('mainAg')
+                @yield('listeAg')
+                @yield('venteAg')
             </main>
         </div>
     </div>

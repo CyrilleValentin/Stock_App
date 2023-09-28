@@ -1,4 +1,4 @@
-@extends('agent.dashboardAgent')
+@extends('admin.dashboard')
 @section('main')
     <div class="container px-6 mx-auto grid">
 
@@ -498,6 +498,16 @@
                         <span>Paid</span>
                     </div>
                 </div>
+            </div>
+
+            <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
+                    Revenue
+                </h4>
+                <div style="width: 600px; margin: auto;">
+                    <canvas id="myChart"></canvas>
+                </div>
+
             </div>
         </div>
     </div>

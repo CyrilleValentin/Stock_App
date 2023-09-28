@@ -32,7 +32,8 @@ class AuthenticatedSessionController extends Controller
         if (Auth::user()->isAdmin()) {
             // Rediriger les administrateurs vers le tableau de bord de l'admin
             return redirect()->route('admin.dashboard');
-        } else if (Auth::user()->isAgent()) {
+        } 
+        else if (Auth::user()->isAgent()) {
             // Rediriger les administrateurs vers le tableau de bord de l'agent
             return redirect()->route('agent.dashboard');
         }

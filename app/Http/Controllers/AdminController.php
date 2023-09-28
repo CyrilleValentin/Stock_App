@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Vente;
-
+use Illuminate\Support\Facades\DB;
 use App\Models\Montre;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\User;
@@ -15,7 +15,10 @@ class AdminController extends Controller
         $totalClientsCount = User::where('role', 'client')->count();
         $sommeTotale = Vente::sum('montant_total');
         // Logique du tableau de bord d'administration
-        return view('admin.main',['sommeTotale' => $sommeTotale], compact('totalClientsCount'));
+        $data = Montre::select('marque', DB::raw('SUM(quantite) as total_quantite'))
+        ->groupBy('marque')
+        ->get();
+        return view('admin.main',['sommeTotale' => $sommeTotale,'data' => $data], compact('totalClientsCount'));
     }
     public function ajout()
     {
@@ -33,5 +36,6 @@ class AdminController extends Controller
         $montres = Montre::all();
         return view('admin.vente')->with('montres', $montres);
     }
+   
     
 }

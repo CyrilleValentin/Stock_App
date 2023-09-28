@@ -10,18 +10,18 @@ use Illuminate\Foundation\Auth\User;
 class AgentController extends Controller
 {
     //
-    public function dashboard()
+    public function dashboardA()
     {
         $totalClientsCount = User::where('role', 'client')->count();
         $sommeTotale = Vente::sum('montant_total');
         // Logique du tableau de bord d'administration
-        return view('agent.main',['sommeTotale' => $sommeTotale], compact('totalClientsCount'));
+        return view('agent.mainAg',['sommeTotale' => $sommeTotale], compact('totalClientsCount'));
     }
     
-    public function liste()
+    public function listeA()
     {
         // Logique du tableau de bord d'administration
-        return view('agent.listeMontre');
+        return view('agent.listeMontreAg');
     }
     public function vente()
     {

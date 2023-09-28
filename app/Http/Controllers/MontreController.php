@@ -50,7 +50,7 @@ class MontreController extends Controller
     public function index2()
     {
         $montres = Montre::all();
-        return view('agent.listeMontre')->with('montres', $montres);
+        return view('agent.listeMontreAg')->with('montres', $montres);
         
     }
 
@@ -102,7 +102,7 @@ public function vente2($id)
 {
     $montre = Montre::findOrFail($id);
 
-    return view('agent.vente')->with('montre', $montre);
+    return view('agent.venteAg')->with('montre', $montre);
 }
 
 public function enregistrerVente(Request $request, $id)

@@ -1,5 +1,5 @@
 @extends('agent.dashboardAgent')
-@section('vente')
+@section('venteAg')
     <div class="container px-6 mx-auto grid my-4">
         <section class="bg-white dark:bg-gray-900  container">
             <div class="py-8 px-4 mx-auto w-lg lg:py-2">

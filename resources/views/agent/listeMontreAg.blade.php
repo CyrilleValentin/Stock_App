@@ -1,5 +1,5 @@
 @extends('agent.dashboardAgent')
-@section('liste')
+@section('listeAg')
     <div class="container grid px-6 mx-auto">
 
 

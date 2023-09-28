@@ -7,6 +7,7 @@ use App\Http\Controllers\VenteController;
 use App\Http\Controllers\MontreController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GraphController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -65,13 +66,15 @@ Route::middleware(['auth', 'admin'])->group(function () {
     //Attribuer role agent à un utilisateur
     Route::get('/users/{id}/edit', [RegisteredUserController::class, 'edit'])->name('user.edit');
     Route::post('/users/{id}/update', [RegisteredUserController::class, 'update'])->name('user.update');
+     // graphe
+   // Route::get('/admin/dashboard', [GraphController::class, 'showGraph'])->name('graph');
     // Ajoute d'autres routes spécifiques à l'administration ici
 });
 
-Route::middleware(['auth', 'agent'])->group(function () {
-    //Navigation
-    Route::get('/agent/dashboard', [AgentController::class, 'dashboard'])->name('agent.dashboard');
-    Route::get('/agent/liste', [AgentController::class, 'liste'])->name('agent.liste');
+ Route::middleware(['auth', 'agent'])->group(function () {
+//     //Navigation
+   Route::get('/agent/dashboard', [AgentController::class, 'dashboardA'])->name('agent.dashboard');
+    Route::get('/agent/liste', [AgentController::class, 'listeA'])->name('agent.liste');
      //Liste des montres
      Route::get('/agent/liste', [MontreController::class, 'index2'])->name('agent.liste');
      //Mis à jour de montres
@@ -80,5 +83,6 @@ Route::middleware(['auth', 'agent'])->group(function () {
      //Vente de montres
      Route::get('/montres/{id}/vente', [MontreController::class, 'vente2'])->name('montres.vente');
      Route::post('/montres/{id}/enregistrer-vente', [MontreController::class, 'enregistrerVente'])->name('enregistrer-vente');
-});
+    
+ });
 require __DIR__.'/auth.php';
