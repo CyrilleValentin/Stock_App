@@ -81,7 +81,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
      Route::get('/montres/{id}/edit', [MontreController::class, 'edit'])->name('montres.edit');
      Route::post('/montres/{id}/update', [MontreController::class, 'update'])->name('montres.update');
      //Vente de montres
-     Route::get('/montres/{id}/vente', [MontreController::class, 'vente2'])->name('montres.vente');
+     Route::get('/montres/{id}/venteAgent', [MontreController::class, 'vente2'])->name('montres.vente2');
      Route::post('/montres/{id}/enregistrer-vente', [MontreController::class, 'enregistrerVente'])->name('enregistrer-vente');
     
  });

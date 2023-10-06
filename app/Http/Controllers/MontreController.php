@@ -94,14 +94,12 @@ public function update(Request $request, $id)
 public function vente($id)
 {
     $montre = Montre::findOrFail($id);
-
     return view('admin.vente')->with('montre', $montre);
 }
 
 public function vente2($id)
 {
     $montre = Montre::findOrFail($id);
-
     return view('agent.venteAg')->with('montre', $montre);
 }
 
